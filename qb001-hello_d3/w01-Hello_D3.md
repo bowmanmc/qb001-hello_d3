@@ -1,4 +1,8 @@
-
+---
+layout: page
+title: Lesson 01 - Hello D3
+permalink: /01.html
+---
 ## Lesson 01 - Hello D3
 
 Hello! Welcome to the Data Visualization with D3.js course by

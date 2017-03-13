@@ -1,4 +1,8 @@
-
+---
+layout: page
+title: Overview
+permalink: /
+---
 # Introduction to D3.js
 This course is an introduction to the d3 data visualization library. 10 Day Course
 

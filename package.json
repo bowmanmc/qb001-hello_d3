@@ -1,0 +1,38 @@
+{
+  "name": "qblessons",
+  "version": "1.0.0",
+  "description": "QuickBits Lessons",
+  "scripts": {
+    "jekyll": "jekyll build --incremental --source qb001-hello_d3 --destination build",
+    "watch": "npm-run-all --parallel watch:jekyll",
+    "watch:jekyll": "nodemon -w qb001-hello_d3 -e html,md,png,jpg,gif,svg,yml,xml,js,css,yml -x \"npm run jekyll\"",
+    "server:dev": "babel-node tools/runBrowserSync.js",
+    "prebuild": "rimraf build",
+    "build": "npm-run-all jekyll",
+    "prestart": "npm run build",
+    "start": "npm-run-all --parallel server:dev watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bowmanmc/qblessons.git"
+  },
+  "author": "Code for Dayton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bowmanmc/qblessons/issues"
+  },
+  "dependencies": {
+        "babel-cli": "^6.18.0",
+        "babel-core": "^6.21.0",
+        "babel-loader": "^6.2.10",
+        "babel-preset-es2015": "^6.18.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "copy-dir": "^0.3.0",
+    "mkdirp": "^0.5.1",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^3.1.2",
+    "rimraf": "^2.5.4"
+  }
+}
