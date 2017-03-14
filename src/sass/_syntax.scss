@@ -1,6 +1,7 @@
 // From: https://gist.github.com/markfknight/9822503
 /* Adjusted to give override background and text colour */
 .highlight pre, pre, .highlight .hll {
+    background: #ffffff;
     border: 1px solid #ccc;
     font-family: $fontstack-mono;
     padding: 1.0em 2.0em;

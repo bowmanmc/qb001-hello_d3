@@ -6,3 +6,15 @@ $csstricks-mono: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'L
 $fontstack-mono: $csstricks-mono;
 $fontstack-body: $mediums-font-sansserif;
 $fontstack-headings: $mediums-font-heading;
+
+
+body, html {
+    font-family: $fontstack-body;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $fontstack-headings;
+    font-weight: bold;
+}

@@ -19,7 +19,8 @@ friends.
 
 To get our feet wet, let’s build a simple hello world type application
 with D3. Open the Hello D3 pen from
-http://codepen.io/QuickBits/pen/BpqXPJ and take a look. I’ve set up a
+[http://codepen.io/QuickBits/pen/BpqXPJ](http://codepen.io/QuickBits/pen/BpqXPJ)
+and take a look. I’ve set up a
 simple HTML page with a heading saying “Hello D3” along with an empty
 div with the id of “message”. This pen has the D3 library already
 loaded into it as well as the Bootstrap CSS framework, so we’re ready
@@ -36,8 +37,9 @@ immediately, displaying the word “Howdy” below the page heading.
 Sweet! Congratulations on writing your first D3 program!
 
 So what happened? Let’s pull it apart a bit. The d3 select function
-comes from the d3-selection [https://github.com/d3/d3-selection]
-project and allows users to grab a set of DOM elements to manipulate
+comes from the
+[d3-selection project](https://github.com/d3/d3-selection)
+and allows users to grab a set of DOM elements to manipulate
 with D3. D3 selection uses the standard W3C selector strings you’re
 used to using with jQuery and other libraries, so in this case,
 “#message” tells D3 to select the element with the id of “message”.
@@ -75,7 +77,10 @@ by line.
 const greetings = ['Hello', 'Hola', 'Bonjour', 'Salaam'];
 {% endhighlight %}
 
-This line declares an array of greetings in different languages. This is using the const keyword from ES6, letting the browser know that greetings should not be changed. If you haven’t made the move to ES6 syntax yet, feel free to use “var” instead.
+This line declares an array of greetings in different languages. This is using
+the const keyword from ES6, letting the browser know that greetings should not
+be changed. If you haven’t made the move to ES6 syntax yet, feel free to use
+“var” instead.
 
 {% highlight JavaScript %}
 d3.select('#message')
@@ -161,10 +166,13 @@ Every day, you’ll have a bit of homework to help solidify the lesson
 and hone your new skills. Don’t worry, your QuickBits homework will be
 short, sweet, and useful!
 
-1. Take a look at D3 pens on CodePen by searching for the term “D3”. What types of visualizations are out there? Take a look at the code for a few of the most interesting ones. Does any of the code look familiar to what we wrote today?
+1. Take a look at D3 pens on CodePen by searching for the term “D3”. What
+types of visualizations are out there? Take a look at the code for a few
+of the most interesting ones. Does any of the code look familiar to what we
+wrote today?
 
 ## Further Reading
-* https://d3js.org
-* https://github.com/d3/d3-selection
-* https://github.com/d3/d3/wiki/Gallery
-* https://babeljs.io/learn-es2015/
+* [https://d3js.org](https://d3js.org)
+* [https://github.com/d3/d3-selection](https://github.com/d3/d3-selection)
+* [https://github.com/d3/d3/wiki/Gallery](https://github.com/d3/d3/wiki/Gallery)
+* [https://babeljs.io/learn-es2015/](https://babeljs.io/learn-es2015/)
