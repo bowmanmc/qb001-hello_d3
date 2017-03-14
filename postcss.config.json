@@ -1,0 +1,15 @@
+{
+    "input": "qb001-hello_d3/_includes/bundle.css",
+    "output": "qb001-hello_d3/_includes/bundle.min.css",
+    "use": [
+        "autoprefixer",
+        "cssnano"
+    ],
+    "autoprefixer": {
+        "browsers": "> 5%, Android 2.3"
+    },
+    "cssnano": {
+        "safe": true,
+        "sourcemap": false
+    }
+}

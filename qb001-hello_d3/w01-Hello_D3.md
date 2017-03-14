@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Lesson 01 - Hello D3
 permalink: /01.html
 ---
@@ -27,9 +27,9 @@ to get coding.
 
 In the JavaScript (JS) editor, add the following line of code:
 
-```JavaScript
+{% highlight JavaScript %}
 d3.select('#message').text('Howdy');
-```
+{% endhighlight %}
 
 Save the pen by pressing Ctrl+S, causing the pen to execute
 immediately, displaying the word “Howdy” below the page heading.
@@ -48,15 +48,15 @@ on our selection, which sets the text contained within the element
 to whatever you pass in - “howdy” in our case. This leaves us with
 the following HTML displayed on the page:
 
-```HTML
+{% highlight HTML %}
 <div id=“message”>howdy</div>
-```
+{% endhighlight %}
 
 Great work so far! But D3 stands for Data Driven Documents, so before
 we quit for the day, let’s make something a little more data driven.
 In the JavaScript (JS) editor, change the code to:
 
-```JavaScript
+{% highlight JavaScript %}
 const greetings = ['Hello', 'Hola', 'Bonjour', 'Salaam'];
 d3.select('#message')
     .append('ul')
@@ -66,58 +66,58 @@ d3.select('#message')
     .append('li').text(d => {
         return d;
     });
-```
+{% endhighlight %}
 
 This example is a little more involved, so let’s step through it line
 by line.
 
-```JavaScript
+{% highlight JavaScript %}
 const greetings = ['Hello', 'Hola', 'Bonjour', 'Salaam'];
-```
+{% endhighlight %}
 
 This line declares an array of greetings in different languages. This is using the const keyword from ES6, letting the browser know that greetings should not be changed. If you haven’t made the move to ES6 syntax yet, feel free to use “var” instead.
 
-```JavaScript
+{% highlight JavaScript %}
 d3.select('#message')
-```
+{% endhighlight %}
 
 This is our selection. The root element we’re going to be working from.
 
-```JavaScript
+{% highlight JavaScript %}
     .append('ul')
-```
+{% endhighlight %}
 
 This line appends a unordered list element to the messages div.
 
-```JavaScript
+{% highlight JavaScript %}
     .selectAll('li')
-```
+{% endhighlight %}
 
 This selection gets all of the list elements under the ul tag we just
 added. “But there aren’t any list elements there yet!” I can hear you
 saying. And that’s right, this syntax is a little strange, but will
 make more sense as you get comfortable with the library.
 
-```JavaScript
+{% highlight JavaScript %}
     .data(greetings)
-```
+{% endhighlight %}
 
 This is where we bind our data to the list elements we just selected.
 Remember “Data Driven Documents”.
 
-```JavaScript
+{% highlight JavaScript %}
     .enter()
-```
+{% endhighlight %}
 
 This line sets up the next. It is telling D3 that when a new item
 appears in the variable we passed into the data() function on line 5,
 we’re going to perform the following chained operation.
 
-```JavaScript
+{% highlight JavaScript %}
     .append('li').text(d => {
         return d;
     });
-```
+{% endhighlight %}
 
 These lines should be explained together. Since this is chained to
 the enter() function, it will be called when new items are found in
@@ -134,7 +134,7 @@ Great work! You should now have an unordered list of greetings
 displayed below the Hello D3 heading on your page. The output of
 the JavaScript you just typed in should look like:
 
-```HTML
+{% highlight HTML %}
 <div id=“message”>
     <ul>
         <li>Hello</li>
@@ -143,7 +143,7 @@ the JavaScript you just typed in should look like:
         <li>Salaam</li>
     </ul>
 </div>
-```
+{% endhighlight %}
 
 Don’t worry if this isn’t totally making sense just yet. D3 syntax
 and conventions can be a little strange at first, but as you use it

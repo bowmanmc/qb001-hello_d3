@@ -4,11 +4,14 @@
   "description": "QuickBits Lessons",
   "scripts": {
     "jekyll": "jekyll build --incremental --source qb001-hello_d3 --destination build",
-    "watch": "npm-run-all --parallel watch:jekyll",
+    "watch": "npm-run-all --parallel watch:jekyll watch:sass",
     "watch:jekyll": "nodemon -w qb001-hello_d3 -e html,md,png,jpg,gif,svg,yml,xml,js,css,yml -x \"npm run jekyll\"",
+    "watch:sass": "nodemon -e scss -w qb001-hello_d3/sass -x \"npm run sass\"",
+    "sass": "node-sass --source-map true --include-path qb001-hello_d3/sass --include-path node_modules qb001-hello_d3/sass/main.scss qb001-hello_d3/_includes/bundle.css",
+    "postsass": "postcss -c postcss.config.json",
     "server:dev": "babel-node tools/runBrowserSync.js",
     "prebuild": "rimraf build",
-    "build": "npm-run-all jekyll",
+    "build": "npm-run-all sass jekyll",
     "prestart": "npm run build",
     "start": "npm-run-all --parallel server:dev watch"
   },
@@ -16,23 +19,25 @@
     "type": "git",
     "url": "https://github.com/bowmanmc/qblessons.git"
   },
-  "author": "Code for Dayton",
-  "license": "MIT",
+  "author": "Michael Bowman <bowmanmc@gmail.com>",
   "bugs": {
     "url": "https://github.com/bowmanmc/qblessons/issues"
   },
-  "dependencies": {
-        "babel-cli": "^6.18.0",
-        "babel-core": "^6.21.0",
-        "babel-loader": "^6.2.10",
-        "babel-preset-es2015": "^6.18.0"
-  },
   "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
     "browser-sync": "^2.18.5",
     "copy-dir": "^0.3.0",
+    "cssnano": "^3.10.0",
     "mkdirp": "^0.5.1",
+    "node-sass": "^4.5.0",
     "nodemon": "^1.11.0",
+    "normalize.css": "^5.0.0",
     "npm-run-all": "^3.1.2",
+    "postcss-cli": "^2.6.0",
     "rimraf": "^2.5.4"
   }
 }

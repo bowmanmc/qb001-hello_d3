@@ -4,3 +4,6 @@ build
 .jekyll-metadata
 node_modules
 .DS_Store
+npm-debug*.log
+qb001-hello_d3/_includes/*.css
+qb001-hello_d3/_includes/*.map

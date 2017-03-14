@@ -23,9 +23,9 @@ github_username:  bowmanmc
 
 # Build settings
 markdown: kramdown
-theme: minima
+#theme: minima
+#theme: jekyll-whiteglass
 gems:
-  - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
