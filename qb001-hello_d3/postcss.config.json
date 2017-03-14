@@ -1,6 +1,6 @@
 {
-    "input": "qb001-hello_d3/_includes/bundle.css",
-    "output": "qb001-hello_d3/_includes/bundle.min.css",
+    "input": "src/_includes/bundle.css",
+    "output": "src/_includes/bundle.min.css",
     "use": [
         "autoprefixer",
         "cssnano"
