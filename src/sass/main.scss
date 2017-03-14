@@ -1,3 +1,8 @@
-body, html {
-    background: #f00;
-}
+@charset 'utf-8';
+
+// Libraries
+@import 'normalize.css/normalize';
+
+// Our stuff
+@import 'typography';
+@import 'syntax';
