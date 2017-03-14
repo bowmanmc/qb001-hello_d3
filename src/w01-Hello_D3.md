@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Lesson 01 - Hello D3
+title: Day 1 - Hello D3
 permalink: /01.html
 ---
-## Lesson 01 - Hello D3
 
 Hello! Welcome to the Data Visualization with D3.js course by
 QuickBits. We’ll be spending the next two weeks exploring D3 and
