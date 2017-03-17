@@ -4,18 +4,21 @@
   "description": "Quick Bits 001 - Hello D3 - An introduction to Data Visualization with D3.js",
   "scripts": {
     "jekyll": "jekyll build --incremental --source src --destination build",
+    "clean": "rimraf build",
     "watch": "npm-run-all --parallel watch:jekyll watch:sass",
     "watch:jekyll": "nodemon -w src -e html,md,png,jpg,gif,svg,yml,xml,js,css,yml -x \"npm run jekyll\"",
     "watch:sass": "nodemon -e scss -w src/sass -x \"npm run sass\"",
     "sass": "node-sass --source-map true --include-path src/sass --include-path node_modules src/sass/main.scss src/_includes/bundle.css",
     "postsass": "postcss -c postcss.config.json",
     "server:dev": "babel-node tools/runBrowserSync.js",
-    "prebuild": "rimraf build",
+    "prebuild": "npm run clean",
     "build": "npm-run-all sass jekyll",
     "prestart": "npm run build",
     "start": "npm-run-all --parallel server:dev watch",
     "dist": "npm-run-all sass jekyll version",
-    "version": "babel-node tools/writeVersionTxt.js"
+    "version": "babel-node tools/writeVersionTxt.js",
+    "predeploy": "npm-run-all clean dist",
+    "deploy": "babel-node tools/deploy.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +30,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
+    "aws-publisher": "0.0.4",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
