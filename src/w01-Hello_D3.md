@@ -7,23 +7,24 @@ permalink: /01.html
 Hello! Welcome to the Data Visualization with D3.js course by
 QuickBits. We’ll be spending the next two weeks exploring D3 and
 building some awesome visualizations with it. We’ll start with the
-basics today, but quickly move on to building actual visualizations
+basics today and quickly move on to building actual visualizations
 you can tweak, build upon, and use in your own work.
 
 The coding samples and exercises in this course will be done using
 [CodePen](http://codepen.io), an interactive playground for web
-development. If you don’t already have an account, I recommend creating
-one. This will allow you to save your progress and share it with your
+development. I recommend creating an account and logging into it.
+This will allow you to save your progress and share it with your
 friends.
 
-To get our feet wet, let’s build a simple hello world type application
-with D3. Open the Hello D3 pen from
+Keeping with tradition, our first steps with D3 will be creating a
+Hello World style application.
+Open the Hello D3 pen from
 [http://codepen.io/QuickBits/pen/BpqXPJ](http://codepen.io/QuickBits/pen/BpqXPJ)
-and take a look. I’ve set up a
-simple HTML page with a heading saying “Hello D3” along with an empty
-div with the id of “message”. This pen has the D3 library already
-loaded into it as well as the Bootstrap CSS framework, so we’re ready
-to get coding.
+and take a look.
+I’ve set up an HTML page here with a heading saying “Hello D3”.
+There's also an empty div after the heading with the id of “message”.
+This pen has the D3 library already loaded into it so we're
+ready to rock.
 
 In the JavaScript (JS) editor, add the following line of code:
 
@@ -31,30 +32,30 @@ In the JavaScript (JS) editor, add the following line of code:
 d3.select('#message').text('Howdy');
 {% endhighlight %}
 
-Save the pen by pressing Ctrl+S, causing the pen to execute
-immediately, displaying the word “Howdy” below the page heading.
+Save the pen by pressing the Ctrl+S shortcut key combination, or the Save
+button in the top toolbar. This will save your work and cause the pen to execute
+immediately. The word “Howdy” should now show up below the "Hello D3" page heading.
 Sweet! Congratulations on writing your first D3 program!
 
-So what happened? Let’s pull it apart a bit. The d3 select function
-comes from the
+Let’s pull this apart a bit and understand what happened.
+The d3 select function comes from the
 [d3-selection project](https://github.com/d3/d3-selection)
-and allows users to grab a set of DOM elements to manipulate
+and allows you to grab a set of DOM elements to manipulate
 with D3. D3 selection uses the standard W3C selector strings you’re
 used to using with jQuery and other libraries, so in this case,
-“#message” tells D3 to select the element with the id of “message”.
-Note that even though in this example we only selected a single
-element, D3 selections can match many (or zero) elements on a page
-and operate on them all at once. Next, we called the function text
+“#message” tells D3 to retrieve the element on the page with an
+id of “message”. Next, we called the text function
 on our selection, which sets the text contained within the element
 to whatever you pass in - “howdy” in our case. This leaves us with
 the following HTML displayed on the page:
 
 {% highlight HTML %}
+<h1>Hello D3</h1>
 <div id=“message”>howdy</div>
 {% endhighlight %}
 
 Great work so far! But D3 stands for Data Driven Documents, so before
-we quit for the day, let’s make something a little more data driven.
+we call it a day, let’s make something a little more data driven.
 In the JavaScript (JS) editor, change the code to:
 
 {% highlight JavaScript %}
@@ -69,53 +70,60 @@ d3.select('#message')
     });
 {% endhighlight %}
 
-This example is a little more involved, so let’s step through it line
-by line.
+This example is a little more involved, so let’s step through it a line at
+a time.
 
 {% highlight JavaScript %}
 const greetings = ['Hello', 'Hola', 'Bonjour', 'Salaam'];
 {% endhighlight %}
 
 This line declares an array of greetings in different languages. This is using
-the const keyword from ES6, letting the browser know that greetings should not
-be changed. If you haven’t made the move to ES6 syntax yet, feel free to use
-“var” instead.
+the const keyword from ES6, letting the browser know that greetings array
+should not be modified.
 
 {% highlight JavaScript %}
 d3.select('#message')
 {% endhighlight %}
 
-This is our selection. The root element we’re going to be working from.
+This is our selection, same as the last example... This is the root
+element we’re going to be working from.
 
 {% highlight JavaScript %}
     .append('ul')
 {% endhighlight %}
 
-This line appends a unordered list element to the messages div.
+This line appends a unordered list element inside of the messages div.
 
 {% highlight JavaScript %}
     .selectAll('li')
 {% endhighlight %}
 
-This selection gets all of the list elements under the ul tag we just
-added. “But there aren’t any list elements there yet!” I can hear you
-saying. And that’s right, this syntax is a little strange, but will
-make more sense as you get comfortable with the library.
+This selection gets all of the list elements under the ul tag we just added.
+This syntax is a little strange and can be hard for new D3 programmers to
+wrap their heads around... Why would we select list elements here when we
+know there aren't any elements there yet?
+The answer is that it makes the library more flexible in advanced situations.
+Imagine if we had a data set that was being manipulated by the user or updated
+in the background from the server. We would want to dynamically add and remove
+elements from the list as we received new data. We'll talk more about this as
+the course goes on, but this syntax will make more sense as you get more
+familiar with the library.
 
 {% highlight JavaScript %}
     .data(greetings)
 {% endhighlight %}
 
 This is where we bind our data to the list elements we just selected.
-Remember “Data Driven Documents”.
+Remember “Data Driven Documents”? This is going to tie our array of greetings
+to list elements on our page.
 
 {% highlight JavaScript %}
     .enter()
 {% endhighlight %}
 
 This line sets up the next. It is telling D3 that when a new item
-appears in the variable we passed into the data() function on line 5,
-we’re going to perform the following chained operation.
+appears in the array variable we passed into the data() function on line 5,
+we’re going to perform the following operation.
 
 {% highlight JavaScript %}
     .append('li').text(d => {
@@ -134,9 +142,9 @@ A variable named d usually refers to a single element in an array of
 data. In this case, it will be a string object containing a greeting
 from our greetings array.
 
-Great work! You should now have an unordered list of greetings
+Ok, good job! You should now have an unordered list of greetings
 displayed below the Hello D3 heading on your page. The output of
-the JavaScript you just typed in should look like:
+the JavaScript you just typed in will result in the following HTML:
 
 {% highlight HTML %}
 <div id=“message”>
@@ -155,6 +163,7 @@ more and more, these conventions will save you lots of time and prove
 to be powerful tools for visualizing large amounts of data with a
 small amount of code.
 
+Congratulations!
 Today you took your first steps with D3.js. You edited code using
 CodePen. You created a list of HTML elements driven by an array of
 data. Tomorrow we’ll start using D3 to build visualizations, starting
