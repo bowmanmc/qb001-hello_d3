@@ -1,6 +1,6 @@
 .content {
     margin: 0 auto;
-    max-width: 768px;
+    max-width: 512px;
     padding: 1.0em;
 }
 
@@ -19,9 +19,4 @@
     font-size: 12px;
     margin-top: 2.5em;
     text-align: right;
-
-    a {
-        color: $clr-highlight;
-        text-decoration: none;
-    }
 }

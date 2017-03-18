@@ -6,3 +6,15 @@ body {
 figure {
     margin: 1.0em 0;
 }
+
+a {
+    color: $clr-highlight;
+    font-weight: bold;
+    text-decoration: underline;
+    white-space: normal;
+    word-wrap: break-word;
+
+    &:hover {
+        color: lighten($clr-highlight, 10%);
+    }
+}
