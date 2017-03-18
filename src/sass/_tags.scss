@@ -1,6 +1,7 @@
 
 body {
     background: #f6f6f6;
+    color: $clr-black;
 }
 
 figure {
@@ -11,10 +12,19 @@ a {
     color: $clr-highlight;
     font-weight: bold;
     text-decoration: underline;
+    text-shadow: none;
     white-space: normal;
     word-wrap: break-word;
 
     &:hover {
         color: lighten($clr-highlight, 10%);
+    }
+}
+
+ul {
+    list-style: none;
+
+    li {
+        margin: 0.5em 0;
     }
 }
