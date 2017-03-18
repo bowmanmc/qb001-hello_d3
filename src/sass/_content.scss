@@ -8,6 +8,20 @@
     background: $clr-black;
     border-bottom: 1px solid $clr-white;
     color: $clr-white;
-    padding: 2.0em;
+    padding: 2.0em 1.0em 0.5em 1.0em;
     text-align: center;
+}
+
+.header__logo {
+    text-align: center;
+}
+.header__browserlink {
+    font-size: 12px;
+    margin-top: 2.5em;
+    text-align: right;
+
+    a {
+        color: $clr-highlight;
+        text-decoration: none;
+    }
 }
