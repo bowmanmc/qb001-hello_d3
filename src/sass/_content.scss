@@ -38,11 +38,11 @@ $max-width: 512px;
     border-top: 1px solid $clr-white;
     color: $clr-white;
     font-size: 14px;
-    max-width: $max-width;
     min-height: 400px;
     padding: 2.0em 1.0em;
 
     div {
         margin-bottom: 2.0em;
+        max-width: $max-width;
     }
 }
