@@ -1,5 +1,5 @@
 ---
 layout: default
 title: Day 2 - Bar Charts
-permalink: /01.html
+permalink: /courses/qb001-HelloD3/lesson02.html
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Day 1 - Hello D3
-permalink: /01.html
+permalink: /courses/qb001-HelloD3/lesson01.html
 ---
 
 Hello! Welcome to the Data Visualization with D3.js course by

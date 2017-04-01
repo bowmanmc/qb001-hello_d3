@@ -1,7 +1,7 @@
 {
-  "name": "qb001-hello_d3",
+  "name": "qbcourses",
   "version": "1.0.0",
-  "description": "Quick Bits 001 - Hello D3 - An introduction to Data Visualization with D3.js",
+  "description": "Quick Bits Courses",
   "scripts": {
     "jekyll": "jekyll build --incremental --source src --destination build",
     "clean": "rimraf build",
@@ -22,11 +22,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bowmanmc/qb001-hello_d3.git"
+    "url": "https://github.com/bowmanmc/qbcourses.git"
   },
   "author": "Michael Bowman <bowmanmc@gmail.com>",
   "bugs": {
-    "url": "https://github.com/bowmanmc/qb001-hello_d3/issues"
+    "url": "https://github.com/bowmanmc/qbcourses/issues"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
