@@ -6,6 +6,12 @@ permalink: /
 # Introduction to D3.js
 This course is an introduction to the d3 data visualization library. 10 Day Course
 
+
+At Sign-up Time
+
+* Introduction to course, syllabus, how to setup CodePen
+
+
 Week 1
 
 1. Introduction to Course and Hello World
@@ -15,6 +21,7 @@ Week 1
 5. Chart Interaction (hover events)
 
 Review and Weekend Programming Challenges
+
 
 Week 2
 
