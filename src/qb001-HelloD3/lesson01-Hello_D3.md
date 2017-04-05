@@ -22,8 +22,8 @@ Open the Hello D3 pen from
 [http://codepen.io/QuickBits/pen/BpqXPJ](http://codepen.io/QuickBits/pen/BpqXPJ)
 and take a look.
 I’ve set up an HTML page here with a heading saying “Hello D3”.
-There's also an empty div after the heading with the id of “message”.
-This pen has the D3 library already loaded into it so we're
+There's also an empty div after the heading with the id set to “message”.
+This pen has the D3 library already loaded into it, so we're
 ready to rock.
 
 In the JavaScript (JS) editor, add the following line of code:
@@ -37,7 +37,7 @@ button in the top toolbar. This will save your work and cause the pen to execute
 immediately. The word “Howdy” should now show up below the "Hello D3" page heading.
 Sweet! Congratulations on writing your first D3 program!
 
-Let’s pull this apart a bit and understand what happened.
+Let’s pull this apart a bit to better understand what happened.
 The d3 select function comes from the
 [d3-selection project](https://github.com/d3/d3-selection)
 and allows you to grab a set of DOM elements to manipulate
@@ -143,7 +143,7 @@ data. In this case, it will be a string object containing a greeting
 from our greetings array.
 
 Ok, good job! You should now have an unordered list of greetings
-displayed below the Hello D3 heading on your page. The output of
+displayed below the "Hello D3" heading on your page. The output of
 the JavaScript you just typed in will result in the following HTML:
 
 {% highlight HTML %}
@@ -176,7 +176,7 @@ short, sweet, and useful!
 
 1. Take a look at D3 pens on CodePen by searching for the term “D3”. What
 types of visualizations are out there? Take a look at the code for a few
-of the most interesting ones. Does any of the code look familiar to what we
+of the most interesting ones. Does any of the code look similar to what we
 wrote today?
 
 ## Further Reading

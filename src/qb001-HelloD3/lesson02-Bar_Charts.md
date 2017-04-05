@@ -32,4 +32,14 @@ let svg = d3.select('#chart').append('svg')
 This bit of code should look familiar. Not that we’ve written exactly this
 code before, but you’ve used all of these functions before. All we’re doing
 here is appending an SVG element to the chart div element and setting the
-width and height of it.
+width and height of it. You should see the outline of the SVG element in red
+due to a border css property.
+
+Now we're ready build an SVG using our salesData variable. Add the following
+JavaScript:
+
+{% highlight JavaScript %}
+let svg = d3.select('#chart').append('svg')
+    .attr('height', 200)
+    .attr('width', 350);
+{% endhighlight %}
