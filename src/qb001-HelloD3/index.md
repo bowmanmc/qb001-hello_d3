@@ -14,8 +14,8 @@ At Sign-up Time
 
 Week 1
 
-1. Introduction to Course and Hello World
-2. Bar Charts - D3 Selection
+1. [Introduction to Course and Hello World](/courses/qb001-HelloD3/lesson01.html)
+2. [Bar Charts - D3 Selection](/courses/qb001-HelloD3/lesson02.html)
 3. Line Charts - D3 Scales
 4. Scatterplots - D3 Axis
 5. Chart Interaction (hover events)
