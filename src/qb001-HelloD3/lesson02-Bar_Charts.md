@@ -125,3 +125,19 @@ The trick here is that we declare the width and height of our entire chart at
 the beginning (svgWidth and svgHeight) and then base everything off of that.
 Try changing the svgWidth variable and see how the chart stretches to fill the
 svg box.
+
+The last thing to do, is to change the color of the bars. Replace the content
+in the CSS editor with:
+
+{% highlight CSS %}
+rect {
+    stroke: #fff;
+    stroke-width: 2px;
+    fill: #4ba94f;
+}
+{% endhighlight %}
+
+This bit of code styles the SVG rect elements. Instead of more familiar
+attributes you've likely used in the past to style HTML elements, these are
+SVG attributes. The stroke and stroke-width attributes control the border drawn
+around each rect. The fill attribute is the color each rect will be filled with.
